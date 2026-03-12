@@ -1,0 +1,40 @@
+
+
+
+1.wrzucam folder na gita (np. pusty)
+
+2.Jestem w folderze, w terminalu zmeiniam repozytorium 
+git init
+
+3. dodaje plik pythonowy 
+git add main.py
+
+4. robie pierwszy commit - zapis/zmianę
+git commit -m "Pierwszy plik"
+
+
+W GITHUB 
+Wejdź na stronę github.com i zaloguj się.
+
+Kliknij "+" w prawym górnym rogu i wybierz "New repository".
+
+Nazwij je np. Bootcamp2 (może być tak samo jak folder).
+
+Ważne: Nie zaznaczaj "Initialize this repository with README" (zostaw wszystko puste).
+
+Kliknij "Create repository".
+
+Z GITHUB KOPIUJE 
+…or push an existing repository from the command line
+git remote add origin https://github.com/EwelinaNiewczas00/Bootcamp2.git
+git branch -M main
+git push -u origin main
+
+
+Teraz, gdy masz już wszystko połączone, za każdym razem gdy stworzysz nowy folder lub plik w Bootcamp2, robisz tylko to:
+
+git add . (dodaje wszystko, co nowe)
+
+git commit -m "opis co dodalas"
+
+git push
