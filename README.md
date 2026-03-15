@@ -1,7 +1,7 @@
 # 📊 Bootcamp - Analiza Danych
 
 ### O projekcie
-To jest moje oficjalne repozytorium szkoleniowe. Gromadzę tutaj materiały, notatki oraz pierwsze projekty realizowane w ramach bootcampu z analizy danych.
+To jest moje oficjalne repozytorium szkoleniowe. Gromadzę tutaj materiały, notatki oraz pierwsze projekty realizowane w ramach bootcampu z data science.
 
 > **Status:** W trakcie nauki. Folder szkoleniowy, w którym realizuję swoje pierwsze zapytania, skrypty w Pythonie oraz automatyzację pracy z danymi.
 
