@@ -1,4 +1,4 @@
-# 📊 Bootcamp - Analiza Danych
+# 📊 Bootcamp - Data Science & ML
 
 ### O projekcie
 To jest moje oficjalne repozytorium szkoleniowe. Gromadzę tutaj materiały, notatki oraz pierwsze projekty realizowane w ramach bootcampu z data science.
