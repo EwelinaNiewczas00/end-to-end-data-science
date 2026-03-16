@@ -2,3 +2,4 @@
 # Ignoruj pliki workspace VS Code (lokalne ustawienia)
 *.code-workspace
 Bootcamp.code-workspace
+##git rm --cached Bootcamp.code-workspace do basha
