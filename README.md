@@ -42,3 +42,6 @@ Contiene:
 **Stack:** Python · Pandas · NumPy · SQL · scikit-learn · XGBoost · PyTorch/Keras · FastAPI · Docker · Git
 
 Actualizado continuamente durante el bootcamp.
+
+
+**This folder represents my learning progress and self-directed work. I learn by doing: following YouTube tutorials, analyzing documentation, and experimenting with code to find my own solutions.**
