@@ -4,4 +4,35 @@
 Bootcamp.code-workspace
 ##git rm --cached Bootcamp.code-workspace do basha
 Notatnik_na_zajęcia/
+#git rm -r --cached Notatnik_na_zajęcia
 
+
+# Duże pliki danych - nie commituj!
+data/raw/*.csv
+data/raw/*.parquet
+*.h5
+*.hdf5
+# Wytrenowane modele - przechowuj osobno (MLflow, cloud)
+models/*.pkl
+models/*.h5
+models/*.pt
+*.ckpt
+# Cache Pythona
+__pycache__/
+*.pyc
+*.pyo
+# Jupyter checkpoints
+.ipynb_checkpoints/
+# Środowiska wirtualne
+venv/
+env/
+.conda/
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+# Logi
+logs/
+*.log
+# Tymczasowe pliki
+tmp/
+temp/
