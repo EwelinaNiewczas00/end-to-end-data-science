@@ -1,0 +1,159 @@
+Wprowadzone komendy, funkcje i słowa kluczowe:
+Podstawowe funkcje wejścia/wyjścia i typy danych:
+print() – wypisuje tekst, zmienne lub wyniki w oknie konsoli
+.
+input() – prosi użytkownika o wprowadzenie danych i zwraca je w postaci ciągu znaków (string)
+.
+type() – służy do sprawdzania typu danych zmiennej lub wartości
+.
+int(), float(), str(), bool() – funkcje rzutowania (typecasting) wykorzystywane do konwersji pomiędzy różnymi typami danych
+.
+Operacje matematyczne:
+round() – zaokrągla liczbę do najbliższej liczby całkowitej lub podanej liczby miejsc po przecinku
+.
+abs() – zwraca wartość bezwzględną liczby
+.
+pow() – podnosi wartość do wybranej potęgi
+.
+max(), min() – znajdują odpowiednio największą i najmniejszą wartość
+.
+Metody z modułu math: math.sqrt() (oblicza pierwiastek kwadratowy), math.ceil() (zaokrągla w górę), math.floor() (zaokrągla w dół)
+.
+Instrukcje warunkowe i operatory logiczne:
+if, elif, else – podstawowe instrukcje warunkowe używane do podejmowania decyzji
+.
+match i case – alternatywa dla wielu instrukcji elif (podobne do "switch" w innych językach)
+.
+and, or, not – operatory logiczne pozwalające na łączenie lub odwracanie wielu warunków
+.
+in, not in – operatory przynależności, sprawdzające czy wartość znajduje się w danej sekwencji
+.
+Pętle i iteracje:
+while – wykonuje blok kodu dopóki postawiony warunek pozostaje prawdziwy
+.
+for ... in ... – pętla iterująca po obiektach iterowalnych (np. zakresach, listach, stringach)
+.
+range() – generuje sekwencję liczb od wybranego punktu początkowego, do punktu końcowego, z określoną wartością skoku
+.
+reversed() – odwraca podaną sekwencję (np. by odliczać w dół)
+.
+continue – pomija obecną iterację pętli i przechodzi na jej początek
+.
+break – całkowicie przerywa działanie i wychodzi z pętli
+.
+Operacje na ciągach znaków (Stringi):
+len() – podaje długość ciągu znaków lub innej kolekcji
+.
+find(), rfind() – zwraca odpowiednio pierwszą i ostatnią pozycję wystąpienia danego znaku w stringu
+.
+capitalize(), upper(), lower() – odpowiednio: zmienia pierwszą literę na wielką, zamienia wszystkie litery na wielkie lub wszystkie na małe
+.
+isdigit(), isalpha() – sprawdzają czy ciąg znaków składa się wyłącznie z cyfr lub wyłącznie z liter
+.
+count() – zlicza ilość wystąpień konkretnego znaku
+.
+replace() – podmienia wszystkie wystąpienia określonego znaku na inny
+.
+Operacje na kolekcjach (Listy, Zbiory, Tuple, Słowniki):
+append(), insert() – dodawanie elementów na koniec listy lub we wskazanym indeksie
+.
+remove(), pop(), clear() – usuwanie poszczególnych elementów, pierwszego/losowego elementu lub czyszczenie całej kolekcji
+.
+sort(), reverse() – sortowanie i fizyczne odwracanie kolejności elementów w liście
+.
+index() – zwraca indeks, pod którym znajduje się dana wartość
+.
+add() – metoda dodawania elementów do zbioru (set)
+.
+get(), update(), keys(), values(), items() – metody pracy ze słownikami. Pozwalają m.in. na bezpieczne pobieranie wartości po kluczu, aktualizowanie danych oraz wyciąganie poszczególnych kluczy i wartości
+.
+Funkcje, moduły i programowanie obiektowe (OOP):
+def – służy do definiowania własnych funkcji i metod
+.
+return – kończy działanie funkcji i odsyła wynik do wywołującego
+.
+import – pozwala na dołączanie do programu wbudowanych lub tworzonych własnych modułów i bibliotek
+.
+class – definiowanie nowych klas (schematów dla obiektów)
+.
+super() – pozwala wezwać konstruktor (lub metody) z klasy nadrzędnej (rodzica)
+.
+Moduł random: funkcje random.randint(), random.random(), random.choice(), random.shuffle() wykorzystywane do generowania losowych liczb, losowego wyboru ze zbioru oraz tasowania kolekcji
+.
+time.sleep() – zatrzymuje ("usypia") program na określoną liczbę sekund
+.
+Obsługa błędów i praca na plikach:
+try, except, finally – bloki wykorzystywane do przechwytywania i bezpiecznej obsługi wyjątków (błędów), tak by program nie zawiesił się nieoczekiwanie
+.
+Metody modułu os.path: exists(), isfile(), isdir() – do weryfikacji istnienia i rodzajów ścieżek na dysku
+.
+open() – otwiera pliki do zapisu ("w"), odczytu ("r") lub dopisywania ("a")
+.
+file.write(), file.read() – odpowiednio wpisują i odczytują zawartość pliku tekstowego
+.
+Moduł json: json.dump(), json.load() – tworzenie i wczytywanie plików JSON ze słowników
+.
+Moduł csv: csv.writer(), csv.reader() – tworzenie i odczytywanie "excelowych" arkuszy CSV
+.
+Moduł datetime – funkcje date(), time(), now() do manipulacji na dacie i czasie systemu
+.
+Pakiet zewnętrzny requests: requests.get() – służy do wysyłania zapytań API (np. do pobrania danych o pogodzie lub pokemonach)
+.
+help() – wbudowana funkcja dostarczająca opisy i obszerne listy wszystkich dostępnych metod wybranego obiektu lub modułu
+.
+
+--------------------------------------------------------------------------------
+Tworzone projekty w ramach kursu:
+Aby utrwalić przekazaną wiedzę, prowadzący przeprowadził widzów przez szereg małych programów i projektów. Należą do nich m.in.:
+Podstawowe aplikacje: Wypisywanie pierwszych tekstów w konsoli (np. "I like pizza")
+.
+Kalkulatory geometryczne: Kalkulator pola prostokąta
+, obwodu i pola koła
+ oraz przeciwprostokątnej trójkąta
+.
+Prosty Kalkulator Matematyczny pozwalający na wybór operatora
+.
+Konwertery jednostek: Konwerter wagi (funty na kilogramy)
+ i konwerter temperatury
+.
+Gra słowna Mad Libs: Tworzenie śmiesznych historyjek na podstawie wylosowanych i podanych słów
+.
+Kalkulator procentu składanego z walidacją wejścia poprzez pętle while
+.
+Koszyk Sklepowy (Shopping Cart): Zbieranie list produktów, wyliczanie sumy całkowitej
+.
+Stoisko Koncesyjne (Concession Stand): Użycie słowników do mapowania jedzenia z konkretnymi cenami
+.
+Odliczanie / Minutnik (Countdown timer)
+.
+Generator prostokątów z ASCII: Użycie podwójnych pętli do rysowania siatek / kształtów znakami
+.
+Rysowanie klawiatury numerycznej (2D Telephone Keypad) w oparciu o kolekcje dwuwymiarowe
+.
+Gry na zgadywanie:
+Klasyczne zgadywanie liczby od 1 do 100
+.
+Kamień, papier, nożyce
+.
+Symulator Rzutu Kostkami z generowaniem sztuki ASCII
+.
+Gra Wisielec (Hangman)
+.
+Gra typu Quiz ze zliczaniem punktacji (korzystająca z krotek / list opcji i pytań)
+.
+System bankowy (Banking Program) ze wsparciem sprawdzania salda, dokonywania wpłat i wypłat pieniędzy
+.
+Symulator automatu do gier (Slot Machine) ze zmiennymi wypłatami za losowane emoji owoców
+.
+Szyfrator (Substitution Cipher): Program do bezpiecznego szyfrowania i deszyfrowania tekstów unikalnym, przetasowanym kluczem znaków
+.
+Aplikacja "Budzik" (Alarm Clock): Program potrafiący odtworzyć plik mp3 za pomocą pakietu pygame, gdy wybije ustalona godzina
+.
+Aplikacje GUI budowane za pomocą biblioteki PyQt5:
+Nauka pracy z oknami, labelami, obrazkami, polami tekstowymi, checkboxami i przyciskami w ramach graficznego interfejsu
+.
+Cyfrowy Widget Zegara
+.
+Funkcjonujący Stoper z opcjami "Start", "Stop" i "Reset"
+.
+Aplikacja Pogodowa na żywo (Live Weather App) łącząca wykorzystanie zewnętrznego interfejsu API z układem wizualnym (GUI), która oprócz odczytu informacji dopasowuje m.in. wyświetlane grafiki i radzi sobie z błędami połączenia
