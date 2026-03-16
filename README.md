@@ -1,29 +1,44 @@
-# Bootcamp Data Science & ML
+#polish
+# Bootcamp Data Science & AI
 
-Materiały, notatki i projekty z bootcampu Data Science & Machine Learning.
+Repozytorium z kursu **Data Scientist Online + AI** (LearnIT, 2026).
 
-**W trakcie realizacji · 2026**
+Zawiera:
+- notatki i kompendia
+- rozwiązania zadań
+- notebooki i skrypty
+- projekty end-to-end
 
-📚 Notatki · Pandas · NumPy · SQL · Wizualizacja · Statystyka · ML klasyczny
+**Stack:** Python · Pandas · NumPy · SQL · scikit-learn · XGBoost · PyTorch/Keras · FastAPI · Docker · Git
 
-🛠️ Python · Jupyter · Git · VS Code
+Aktualizowane na bieżąco podczas bootcampu.
 
-Projekty i notebooki dodawane na bieżąco.
+#english
+# Data Science & AI Bootcamp
 
-⭐ Jeśli uznasz materiały za wartościowe – zostaw gwiazdkę 🌟  
-Konstruktywna krytyka i sugestie są bardzo mile widziane!
+Repository from **Data Scientist Online + AI** course (LearnIT, 2026).
 
-Bootcamp-Data-Science-ML/
-├── 01_Podstawy_Pythona/           # składnia, struktury danych, funkcje
-├── 02_NumPy/                      # operacje wektorowe, broadcasting
-├── 03_Pandas/                     # manipulacja danymi, groupby, merge, pivot
-├── 04_Wizualizacja_danych/        # Matplotlib, Seaborn, Plotly
-├── 05_Statystyka_i_eksploracja/   # EDA, testy statystyczne, rozkłady
-├── 06_SQL_i_bazy_danych/          # zapytania, joins, okna analityczne
-├── 07_Machine_Learning/           # modele klasyczne, walidacja, metryki
-├── 08_Projekty_koncowe/           # end-to-end projekty
-├── notebooks/                     # Jupyter Notebooki z analizami
-├── scripts/                       # samodzielne skrypty .py
-├── data/                          # przykładowe zbiory danych (małe!)
-├── docs/                          # kompendia, cheet sheety, notatki .md
-└── README.md
+Contains:
+- notes & cheat sheets
+- exercise solutions
+- Jupyter notebooks & scripts
+- end-to-end projects
+
+**Stack:** Python · Pandas · NumPy · SQL · scikit-learn · XGBoost · PyTorch/Keras · FastAPI · Docker · Git
+
+Actively updated during the bootcamp.
+
+#español
+# Bootcamp Data Science & IA
+
+Repositorio del curso **Data Scientist Online + AI** (LearnIT, 2026).
+
+Contiene:
+- apuntes y resúmenes
+- soluciones de ejercicios
+- notebooks y scripts
+- proyectos end-to-end
+
+**Stack:** Python · Pandas · NumPy · SQL · scikit-learn · XGBoost · PyTorch/Keras · FastAPI · Docker · Git
+
+Actualizado continuamente durante el bootcamp.
