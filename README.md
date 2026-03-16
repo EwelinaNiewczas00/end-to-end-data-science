@@ -1,14 +1,29 @@
-# 📊 Bootcamp - Data Science & ML
+# Bootcamp Data Science & ML
 
-### O projekcie
-To jest moje oficjalne repozytorium szkoleniowe. Gromadzę tutaj materiały, notatki oraz pierwsze projekty realizowane w ramach bootcampu z data science.
+Materiały, notatki i projekty z bootcampu Data Science & Machine Learning.
 
-> **Status:** W trakcie nauki. Folder szkoleniowy, w którym realizuję swoje pierwsze zapytania, skrypty w Pythonie oraz automatyzację pracy z danymi.
+**W trakcie realizacji · 2026**
 
-### Co tu znajdziesz?
-* **Notatki i Kompendia:** 
-* **Analizy:** Pierwsze kroki z bibliotekami `Pandas` i `NumPy`.
-* **Automatyzacja:** 
+📚 Notatki · Pandas · NumPy · SQL · Wizualizacja · Statystyka · ML klasyczny
 
----
-*Praca w toku – repozytorium aktualizowane na bieżąco podczas zajęć.*
+🛠️ Python · Jupyter · Git · VS Code
+
+Projekty i notebooki dodawane na bieżąco.
+
+⭐ Jeśli uznasz materiały za wartościowe – zostaw gwiazdkę 🌟  
+Konstruktywna krytyka i sugestie są bardzo mile widziane!
+
+Bootcamp-Data-Science-ML/
+├── 01_Podstawy_Pythona/           # składnia, struktury danych, funkcje
+├── 02_NumPy/                      # operacje wektorowe, broadcasting
+├── 03_Pandas/                     # manipulacja danymi, groupby, merge, pivot
+├── 04_Wizualizacja_danych/        # Matplotlib, Seaborn, Plotly
+├── 05_Statystyka_i_eksploracja/   # EDA, testy statystyczne, rozkłady
+├── 06_SQL_i_bazy_danych/          # zapytania, joins, okna analityczne
+├── 07_Machine_Learning/           # modele klasyczne, walidacja, metryki
+├── 08_Projekty_koncowe/           # end-to-end projekty
+├── notebooks/                     # Jupyter Notebooki z analizami
+├── scripts/                       # samodzielne skrypty .py
+├── data/                          # przykładowe zbiory danych (małe!)
+├── docs/                          # kompendia, cheet sheety, notatki .md
+└── README.md
