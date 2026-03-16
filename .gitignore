@@ -1,3 +1,4 @@
 .DS_Store
 # Ignoruj pliki workspace VS Code (lokalne ustawienia)
 *.code-workspace
+Bootcamp.code-workspace
