@@ -75,6 +75,6 @@ build/
 *.swo
 
 # Inne często pomijane
-.DS_Store               # tylko Mac
+.DS_Store            
 .env
 *.log
