@@ -1,7 +1,7 @@
 .DS_Store
 *.DS_Store
 *ignore*
-
+ignore/
 # Ignoruj pliki workspace VS Code (lokalne ustawienia)
 *.code-workspace
 Bootcamp.code-workspace
