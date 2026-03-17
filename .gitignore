@@ -36,3 +36,7 @@ logs/
 # Tymczasowe pliki
 tmp/
 temp/
+.venv/
+.vscode/
+__pycache__/
+*.pyc
