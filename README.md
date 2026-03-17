@@ -28,20 +28,5 @@ Contains:
 
 Actively updated during the bootcamp.
 
-#español
-# Bootcamp Data Science & IA
-
-Repositorio del curso **Data Scientist Online + AI** (LearnIT, 2026).
-
-Contiene:
-- apuntes y resúmenes
-- soluciones de ejercicios
-- notebooks y scripts
-- proyectos end-to-end
-
-**Stack:** Python · Pandas · NumPy · SQL · scikit-learn · XGBoost · PyTorch/Keras · FastAPI · Docker · Git
-
-Actualizado continuamente durante el bootcamp.
-
 
 **This folder represents my learning progress and self-directed work. I learn by doing: following YouTube tutorials, analyzing documentation, and experimenting with code to find my own solutions.**
