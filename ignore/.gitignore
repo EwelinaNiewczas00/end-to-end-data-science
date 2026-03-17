@@ -5,8 +5,6 @@ Bootcamp.code-workspace
 ##git rm --cached Bootcamp.code-workspace do basha
 Notatnik_na_zajęcia/
 #git rm -r --cached Notatnik_na_zajęcia
-
-
 # Duże pliki danych - nie commituj!
 data/raw/*.csv
 data/raw/*.parquet
