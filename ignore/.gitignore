@@ -17,71 +17,7 @@ models/*.pt
 *.ckpt
 # Cache Pythona
 __pycache__/
-*.pyc
-*.pyo
-__pycache__/
-*.py[cod]
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.egg-info/
-dist/
-build/
-*.egg
-# Jupyter checkpoints
-.ipynb_checkpoints/
-# Środowiska wirtualne
-venv/
-env/
-.conda/
-# Pliki systemowe
-.DS_Store
-Thumbs.db
-# Logi
-logs/
-*.log
-# Tymczasowe pliki
-tmp/
-temp/
 .venv/
-.vscode/
 __pycache__/
 *.pyc
-toml/
-# Środowisko wirtualne uv
-.venv/
-venv/
-venv-*/
-
-# Python generowane pliki
-__pycache__/
-*.py[cod]
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.egg-info/
-dist/
-build/
-*.egg
-
-# Edytory / IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Inne często pomijane
-.DS_Store            
-.env
-*.log
-ignore/
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   .gitignore
-
-        modified:   pyproject.toml
-        modified:   main.py
-  (lub nowe pliki jeśli je dodałaś)
+.python-version

@@ -9,3 +9,13 @@
     "python.testing.pytestEnabled": false,
     "python.testing.unittestEnabled": true
 }
+{
+    "files.exclude": {
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/.DS_Store": true,
+        "**/.python-version": false 
+    }
+}
