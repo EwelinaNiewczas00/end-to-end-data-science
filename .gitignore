@@ -12,7 +12,7 @@ ENV/
 # Twoje foldery do ukrycia (wpisz dokładnie tak, jak się nazywają)
 ignore/
 notatki/
-"notatki na zajecia/"
+"notatki na zajecia/" //potem dodam notatki aby byly ignorowane bo pewnie prawa autorskie
 
 # Narzędzia uv i VS Code
 .python-version
