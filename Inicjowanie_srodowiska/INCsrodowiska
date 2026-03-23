@@ -39,3 +39,186 @@ git commit -m "opis co dodalas"
 
 git push
 
+UV to ultra-szybki package manager i narzędzie do zarządzania projektami Python, napisany w Rust przez firmę Astral (twórców lintera     
+  Ruff). Zastępuje pip, pip-tools, virtualenv, pyenv i poetry jednym narzędziem. Główne zalety:                                            
+   
+  - Szybkość — instalacja paczek nawet 10-100x szybsza niż pip                                                                             
+  - Wszystko w jednym — zarządzanie wersjami Pythona, zależnościami, środowiskami wirtualnymi i uruchamianiem skryptów
+  - Kompatybilność — działa z istniejącym ekosystemem (pyproject.toml, requirements.txt)                                                   
+  - Deterministyczny lockfile — uv.lock gwarantuje powtarzalne buildy
+                                                                                                                                           
+  Instalacja                                                                                                                               
+                                                                                                                                           
+  # macOS/Linux                                                                                                                            
+  curl -LsSf https://astral.sh/uv/install.sh | sh                                                                                          
+                                                                                                                                           
+  # lub przez Homebrew
+  brew install uv
+
+  Zarządzanie projektem                                                                                                                    
+   
+  # Nowy projekt                                                                                                                           
+  uv init my-project                                                                                                                       
+  cd my-project
+                                                                                                                                           
+  # Dodanie zależności
+  uv add pandas matplotlib numpy
+  uv add --dev pytest ruff          # dev dependencies
+
+  # Usunięcie zależności                                                                                                                   
+  uv remove pandas
+                                                                                                                                           
+  # Synchronizacja (instalacja wg pyproject.toml / uv.lock)
+  uv sync
+
+  # Uruchomienie skryptu w środowisku projektu
+  uv run python main.py
+  uv run pytest tests/ -v                                                                                                                  
+   
+  Zarządzanie Pythonem                                                                                                                     
+                  
+  # Instalacja konkretnej wersji Pythona                                                                                                   
+  uv python install 3.12                                                                                                                   
+                                                                                                                                           
+  # Lista dostępnych wersji                                                                                                                
+  uv python list                                                                                                                           
+                                                                                                                                           
+  # Przypięcie wersji do projektu (tworzy .python-version)                                                                                 
+  uv python pin 3.12                                                                                                                       
+                                                                                                                                           
+  Kluczowe pliki  
+
+  ┌─────────────────┬──────────────────────────────────┐
+  │      Plik       │               Rola               │
+  ├─────────────────┼──────────────────────────────────┤
+  │ pyproject.toml  │ Definicja projektu i zależności  │
+  ├─────────────────┼──────────────────────────────────┤
+  │ uv.lock         │ Lockfile (commituj do repo)      │                                                                                   
+  ├─────────────────┼──────────────────────────────────┤
+  │ .python-version │ Przypięta wersja Pythona         │                                                                                   
+  ├─────────────────┼──────────────────────────────────┤                                                                                   
+  │ .venv/          │ Wirtualne środowisko (gitignore) │
+  └─────────────────┴──────────────────────────────────┘                                                                                   
+                  
+  Jednorazowe narzędzia (bez instalacji)                                                                                                   
+                  
+  # Odpowiednik npx — uruchom narzędzie bez instalacji                                                                                     
+  uvx ruff check .
+  uvx black .
+  uvx mypy src/                                                                                                                            
+                                                                                                                                           
+  Integracja z VSCode                                                                                                                      
+                                                                                                                                           
+  1. Wybór interpretera — po uv sync VSCode powinien automatycznie wykryć .venv. Jeśli nie:                                                
+    - Cmd+Shift+P → "Python: Select Interpreter"
+    - Wybierz ./.venv/bin/python                                                                                                           
+  2. Ustawienia workspace — dodaj do .vscode/settings.json:
+  {                                                                                                                                        
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true                                                                                            
+  }               
+  3. Terminal — VSCode automatycznie aktywuje .venv w nowym terminalu. Jeśli nie, uv run zawsze użyje właściwego środowiska.               
+                                                                                                                                           
+  Jupyter Notebooks w VSCode
+                                                                                                                                           
+  Konfiguracja    
+
+  # Dodaj ipykernel jako dev dependency
+  uv add --dev ipykernel                                                                                                                   
+   
+  Wymagane rozszerzenia VSCode                                                                                                             
+                  
+  - Jupyter (ms-toolsai.jupyter) — obsługa notebooków                                                                                      
+  - Python (ms-python.python) — interpreter i IntelliSense
+                                                                                                                                           
+  Praca z notebookami
+
+  1. Cmd+Shift+P → "Create: New Jupyter Notebook" (lub utwórz plik .ipynb)                                                                 
+  2. Kliknij "Select Kernel" (prawy górny róg) → "Python Environments" → wybierz .venv z projektu
+  3. Gotowe — notebook korzysta z tych samych zależności co projekt                                                                        
+                                                                                                                                           
+  Jeśli kernel nie widzi nowych paczek po uv add, kliknij restart kernel (Cmd+Shift+P → "Jupyter: Restart Kernel").                        
+                                                                                                                                           
+  Przydatne komendy                                                                                                                        
+                  
+  uv tree              # Drzewo zależności                                                                                                 
+  uv pip list          # Lista zainstalowanych pakietów
+  uv lock --upgrade    # Aktualizacja lockfile'a do najnowszych wersji
+  uv self update       # Aktualizacja samego uv                                                                                            
+                                                                                                                                           
+  Migracja z pip/poetry                                                                                                                    
+                                                                                                                                           
+  # Z istniejącego requirements.txt
+  uv add $(cat requirements.txt)
+
+  # Z poetry — uv czyta pyproject.toml, wystarczy:                                                                                         
+  uv sync
+                                                                                                                                           
+  ---             
+  Najważniejsza zasada: zawsze używaj uv run zamiast bezpośredniego python — to gwarantuje, że skrypt działa w poprawnym środowisku z właściwymi zależnościami.
+
+  Wkrywający sie gitignore:
+
+
+  open -a "Visual Studio Code" .gitignore
+
+  
+  GITIGNORE:
+  # Biblioteki i środowisko (to co najcięższe)
+.venv/
+venv/
+env/
+bin/
+lib/
+include/
+
+# Śmieci z Maca (te ukryte pliki, co robią bałagan)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Śmieci z Pythona
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pliki tymczasowe Jupyter Notebook (Twoje tutoriale)
+.ipynb_checkpoints/
+
+git init TYLKO W GLOWNYM FOLDERZE NIGDY W PODFOLDERACH 
+
+1. Komenda: "Wielkie Czyszczenie Pamięci" (Reset Cache)
+To jest najważniejsza komenda, gdy dopisałaś coś do .gitignore, a Git nadal to widzi i chce wysyłać.
+
+Instrukcja:
+
+Bash
+
+git rm -r --cached .
+Co to robi? Mówi Gitowi: „Zapomnij o wszystkim, co do tej pory śledziłeś w tym folderze. Wyczyść swoją listę obecności”.
+
+Dlaczego to się używa? Ponieważ .gitignore działa tylko na pliki, których Git jeszcze nie zna. Jeśli plik był już raz wysłany na GitHub, to dopisanie go do listy ignorowanych nic nie da – Git go "pamięta". Ta komenda zmusza go, żeby spojrzał na folder jeszcze raz, tym razem czytając Twoje nowe zasady z .gitignore.
+
+2. Komenda: "Naprawa Incepcji" (Usuwanie pod-repozytorium)
+Używasz tego, gdy przez przypadek stworzyłaś repozytorium wewnątrz repozytorium (tak jak u Ciebie z folderem Python).
+
+Instrukcja (wykonujesz wewnątrz problematycznego folderu):
+
+Bash
+
+rm -rf .git
+Co to robi? Kasuje ukryty folder .git, czyli "mózg" tego małego, niepotrzebnego repozytorium.
+
+Dlaczego to się używa? Żeby w Twoim projekcie był tylko jeden szef (jeden folder .git w głównym folderze ProjektX). Dwa mózgi w jednym projekcie to gwarantowany błąd "embedded repository".
+
+3. Komenda: "Wymuszone Zapomnienie" (Gdy Git stawia opór)
+Używasz tego, gdy próbujesz coś usunąć z pamięci, a Git wyrzuca błąd "staged content different".
+
+Instrukcja:
+
+Bash
+
+git rm -rf --cached NAZWA_FOLDERU
+Co to robi? Siłą (flaga -f od force) wyrywa dany folder z pamięci Gita.
+
+Dlaczego to się używa? Gdy Git "boi się" zapomnieć o folderze, bo są w nim zmiany, których jeszcze nie zatwierdziłaś. To taka komenda: „Nie dyskutuj, po prostu o tym zapomnij”.
