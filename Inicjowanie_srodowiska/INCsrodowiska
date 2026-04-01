@@ -222,3 +222,32 @@ git rm -rf --cached NAZWA_FOLDERU
 Co to robi? Siłą (flaga -f od force) wyrywa dany folder z pamięci Gita.
 
 Dlaczego to się używa? Gdy Git "boi się" zapomnieć o folderze, bo są w nim zmiany, których jeszcze nie zatwierdziłaś. To taka komenda: „Nie dyskutuj, po prostu o tym zapomnij”.
+
+
+
+GIT IGNORE
+
+touch .gitignore
+open -a "Visual Studio Code" .gitignore
+
+code .gitignore
+#ZAWARTOŚĆ GIT IGNORE
+# Wirtualne środowiska
+.venv/
+venv/
+env/
+
+# Pliki tymczasowe Pythona
+__pycache__/
+*.pyc
+
+# Śmieci systemowe macOS
+.DS_Store
+
+# Pliki konfiguracyjne edytorów
+.vscode/
+.idea/
+
+
+wszystkie biblio
+uv pip install pandas numpy scikit-learn matplotlib seaborn jupyter
