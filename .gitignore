@@ -17,3 +17,4 @@ notatki/
 # Narzędzia uv i VS Code
 .python-version
 .vscode/
+.idea/
